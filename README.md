@@ -7,20 +7,19 @@ Please note, the original creator of this repository (sebastianhein) did not lic
 
 However, due to extensive modifications required to adapt this effect to the Rendering Graph API this project now contains no original code. Therefore I'm taking libery to post current fork under the `MIT Licence`.
 
-## Renderer Features
+## Renderer Feature
 
-This project contains two experimental RenderFeature implementations that implement a post-processing-like effect in URP using ScriptableRenderFeatures and provide a simple yet effective blur, based on the Kawase blur as described in this [article](https://software.intel.com/en-us/blogs/2014/07/15/an-investigation-of-fast-real-time-gpu-based-image-blur-algorithms).
+This project contains experimental RenderFeature that implements a post-processing-like effect in URP using ScriptableRenderFeature and provides a simple yet effective blur, based on the Kawase blur as described in this [article](https://software.intel.com/en-us/blogs/2014/07/15/an-investigation-of-fast-real-time-gpu-based-image-blur-algorithms).
 
 ![Render features are already attached to the current URP asset](.Screenshots/render_features.png)
 
 ### KawaseBlurRenderGraph.cs
-* renders multiple passes using modern Render Graph idioms for resource management and pass execution
-
-![](.Screenshots/multipass.png)
-### KawaseBlurRenderGraphUnsafePass.cs
-* renders single pass containing the entire blur loop
+* renders single pass containing the entire blur loop using modern Render Graph idioms for resource management and pass execution
 
 ![](.Screenshots/singlepass.png)
+
+![](.Screenshots/frame_debugger.png)
+
 
 ### KawaseBlur.shader
 * Shader is rewritten in HLSL
